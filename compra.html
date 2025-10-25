@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Entradas - Teatro del Sol</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>🎭 Teatro del Sol</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cartelera.html" class="nav-link">Cartelera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="salas.html" class="nav-link">Salas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="registro.html" class="nav-link">Registro</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Compra de Entradas</h1>
+                <p>Completa tu compra de forma segura y rápida</p>
+            </div>
+        </section>
+
+        <section class="compra-section">
+            <div class="container">
+                <div class="compra-container">
+                    <!-- Información del Show -->
+                    <div class="show-summary">
+                        <h2 id="showTitle">Hamlet</h2>
+                        <div class="show-details">
+                            <p><strong>Fecha:</strong> <span id="showDate">15 de Octubre, 2024</span></p>
+                            <p><strong>Hora:</strong> <span id="showTime">20:00 hs</span></p>
+                            <p><strong>Sala:</strong> <span id="showSala">Sala Principal</span></p>
+                            <p><strong>Duración:</strong> <span id="showDuration">2 horas 30 minutos</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Compra -->
+                    <div class="form-container">
+                        <form id="compraForm" class="purchase-form">
+                            <h3>Datos de la Compra</h3>
+                            
+                            <div class="form-group">
+                                <label for="cantidad">Cantidad de Entradas *</label>
+                                <select id="cantidad" name="cantidad" required onchange="calcularTotal()">
+                                    <option value="">Selecciona cantidad</option>
+                                    <option value="1">1 entrada</option>
+                                    <option value="2">2 entradas</option>
+                                    <option value="3">3 entradas</option>
+                                    <option value="4">4 entradas</option>
+                                    <option value="5">5 entradas</option>
+                                    <option value="6">6 entradas</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tipoEntrada">Tipo de Entrada *</label>
+                                <select id="tipoEntrada" name="tipoEntrada" required onchange="calcularTotal()">
+                                    <option value="">Selecciona tipo</option>
+                                    <option value="general" data-price="2500">General - $2,500</option>
+                                    <option value="premium" data-price="3500">Premium - $3,500</option>
+                                    <option value="vip" data-price="4000">VIP - $4,000</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="descuento">Código de Descuento</label>
+                                <input type="text" id="descuento" name="descuento" placeholder="Ingresa tu código">
+                                <button type="button" onclick="aplicarDescuento()" class="btn-small">Aplicar</button>
+                            </div>
+
+                            <h3>Datos Personales</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre *</label>
+                                    <input type="text" id="nombre" name="nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellido">Apellido *</label>
+                                    <input type="text" id="apellido" name="apellido" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" required>
+                            </div>
+
+                            <h3>Método de Pago</h3>
+                            
+                            <div class="payment-methods">
+                                <div class="payment-option">
+                                    <input type="radio" id="tarjeta" name="metodoPago" value="tarjeta" required>
+                                    <label for="tarjeta">💳 Tarjeta de Crédito/Débito</label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" id="transferencia" name="metodoPago" value="transferencia" required>
+                                    <label for="transferencia">🏦 Transferencia Bancaria</label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" id="efectivo" name="metodoPago" value="efectivo" required>
+                                    <label for="efectivo">💵 Pago en Efectivo (Solo en boletería)</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="comentarios">Comentarios Adicionales</label>
+                                <textarea id="comentarios" name="comentarios" rows="3" placeholder="Especifica ubicación preferida, accesibilidad, etc."></textarea>
+                            </div>
+
+                            <!-- Resumen de Compra -->
+                            <div class="purchase-summary">
+                                <h3>Resumen de Compra</h3>
+                                <div class="summary-item">
+                                    <span>Entradas:</span>
+                                    <span id="summaryCantidad">0</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Precio unitario:</span>
+                                    <span id="summaryPrecio">$0</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Subtotal:</span>
+                                    <span id="summarySubtotal">$0</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Descuento:</span>
+                                    <span id="summaryDescuento">$0</span>
+                                </div>
+                                <div class="summary-item total">
+                                    <span><strong>Total:</strong></span>
+                                    <span id="summaryTotal"><strong>$0</strong></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="terminos">
+                                    <input type="checkbox" id="terminos" name="terminos" required>
+                                    Acepto los <a href="#" class="link">términos y condiciones</a> de compra *
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-primary btn-large">Confirmar Compra</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Teatro del Sol. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

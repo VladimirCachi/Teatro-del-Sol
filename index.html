@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teatro del Sol - Venta de Entradas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>🎭 Teatro del Sol</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cartelera.html" class="nav-link">Cartelera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="salas.html" class="nav-link">Salas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="registro.html" class="nav-link">Registro</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Bienvenidos al Teatro del Sol</h1>
+                <p>Descubre las mejores obras teatrales de la temporada</p>
+                <a href="cartelera.html" class="btn-primary">Ver Cartelera</a>
+            </div>
+        </section>
+
+        <!-- Shows Destacados -->
+        <section class="featured-shows">
+            <div class="container">
+                <h2>Obras Destacadas</h2>
+                <div class="shows-grid">
+                    <div class="show-card">
+                        <div class="show-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Hamlet">
+                        </div>
+                        <div class="show-info">
+                            <h3>Hamlet</h3>
+                            <p class="show-theme">Tragedia clásica de Shakespeare</p>
+                            <p class="show-cast"><strong>Elenco:</strong> Juan Pérez, María García, Carlos López</p>
+                            <p class="show-date">Del 15 al 30 de Octubre</p>
+                            <a href="compra.html?show=hamlet" class="btn-secondary">Comprar Entradas</a>
+                        </div>
+                    </div>
+
+                    <div class="show-card">
+                        <div class="show-image">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop" alt="La Casa de Bernarda Alba">
+                        </div>
+                        <div class="show-info">
+                            <h3>La Casa de Bernarda Alba</h3>
+                            <p class="show-theme">Drama rural de Federico García Lorca</p>
+                            <p class="show-cast"><strong>Elenco:</strong> Ana Martínez, Laura Ruiz, Carmen Vega</p>
+                            <p class="show-date">Del 1 al 15 de Noviembre</p>
+                            <a href="compra.html?show=bernarda" class="btn-secondary">Comprar Entradas</a>
+                        </div>
+                    </div>
+
+                    <div class="show-card">
+                        <div class="show-image">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop" alt="El Fantasma de la Ópera">
+                        </div>
+                        <div class="show-info">
+                            <h3>El Fantasma de la Ópera</h3>
+                            <p class="show-theme">Musical romántico y misterioso</p>
+                            <p class="show-cast"><strong>Elenco:</strong> Roberto Silva, Elena Morales, Diego Torres</p>
+                            <p class="show-date">Del 20 de Noviembre al 5 de Diciembre</p>
+                            <a href="compra.html?show=fantasma" class="btn-secondary">Comprar Entradas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información del Teatro -->
+        <section class="theater-info">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>📍 Ubicación</h3>
+                        <p>Av. Corrientes 1234, Buenos Aires</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📞 Contacto</h3>
+                        <p>Tel: (011) 4567-8900</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🕒 Horarios</h3>
+                        <p>Lun-Dom: 20:00 hs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Teatro del Sol. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
