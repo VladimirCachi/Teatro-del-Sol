@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera - Teatro del Sol</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎭</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G1GQ924XFX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G1GQ924XFX');
+</script>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>🎭 Teatro del Sol</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cartelera.html" class="nav-link active">Cartelera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="salas.html" class="nav-link">Salas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="registro.html" class="nav-link">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">Iniciar Sesión</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Cartelera Teatral</h1>
+                <p>Descubre todas las obras en cartelera y reserva tus entradas</p>
+            </div>
+        </section>
+
+        <section class="cartelera-section">
+            <div class="container">
+                <!-- Filtros -->
+                <div class="filters">
+                    <h3>Filtrar por:</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Todas</button>
+                        <button class="filter-btn" data-filter="drama">Drama</button>
+                        <button class="filter-btn" data-filter="comedia">Comedia</button>
+                        <button class="filter-btn" data-filter="musical">Musical</button>
+                        <button class="filter-btn" data-filter="infantil">Infantil</button>
+                    </div>
+                </div>
+
+                <!-- Obras en cartelera -->
+                <div class="cartelera-grid">
+                    <div class="show-card" data-category="drama">
+                        <div class="show-image">
+                            <img src="https://www.hoyesarte.com/wp-content/uploads/2015/11/Hamlet.jpg" alt="Hamlet">
+                        </div>
+                        <div class="show-info">
+                            <h3>Hamlet</h3>
+                            <p class="show-theme">Tragedia clásica de Shakespeare</p>
+                            <p class="show-cast"><strong>Elenco:</strong> Juan Pérez, María García, Carlos López</p>
+                            <p class="show-date">📅 Del 15 al 30 de Octubre, 2025</p>
+                            <p class="show-time">🕐 20:00 hs</p>
+                            <p class="show-sala">📍 Sala Principal</p>
+                            <div class="show-price">$2,500 - $4,000</div>
+                            <a href="compra.html?show=hamlet" class="btn-secondary">Comprar Entradas</a>
+                        </div>
+                    </div>
+
+                    <div class="show-card" data-category="drama">
+                        <div class="show-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/The_House_Of_Bernarda_Alba_by_Hamazkayin_Arek.jpg" alt="La Casa de Bernarda Alba">
+                        </div>
+                        <div class="show-info">
+                            <h3>La Casa de Bernarda Alba</h3>
+                            <p class="show-theme">Drama rural de Federico García Lorca</p>
+                            <p class="show-cast"><strong>Elenco:</strong> Ana Martínez, Laura Ruiz, Carmen Vega</p>
+                            <p class="show-date">📅 Del 1 al 15 de Noviembre, 2025</p>
+                            <p class="show-time">🕐 20:30 hs</p>
+                            <p class="show-sala">📍 Sala Íntima</p>
+                            <div class="show-price">$1,800 - $3,200</div>
+                            <a href="compra.html?show=bernarda" class="btn-secondary">Comprar Entradas</a>
+                        </div>
+                    </div>
+
+                    <div class="show-card" data-category="musical">
+                        <div class="show-image">
+                            <img src="https://media.cnn.com/api/v1/images/stellar/prod/cnne-1143159-fantasma-opera.png?c=original" alt="El Fantasma de la Ópera">
+                        </div>
+                        <div class="show-info">
+                            <h3>El Fantasma de la Ópera</h3>
+                            <p class="show-theme">Musical romántico y misterioso</p>
+                            <p class="show-cast"><strong>Elenco:</strong> Roberto Silva, Elena Morales, Diego Torres</p>
+                            <p class="show-date">📅 Del 20 de Noviembre al 5 de Diciembre, 2025</p>
+                            <p class="show-time">🕐 21:00 hs</p>
+                            <p class="show-sala">📍 Sala Principal</p>
+                            <div class="show-price">$3,500 - $5,500</div>
+                            <a href="compra.html?show=fantasma" class="btn-secondary">Comprar Entradas</a>
+                        </div>
+                    </div>
+
+                    <div class="show-card" data-category="comedia">
+                        <div class="show-image">
+                            <img src="https://i.ytimg.com/vi/5eQyBMylvGk/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgXShWMA8=&rs=AOn4CLDaVbU30QZoG_80PgxdeTVhzv40gQ" alt="El Inspector">
+                        </div>
+                        <div class="show-info">
+                            <h3>El Inspector</h3>
+                            <p class="show-theme">Comedia de enredos de Gogol</p>
+                            <p class="show-cast"><strong>Elenco:</strong> Pedro González, Sofía Herrera, Miguel Ángel</p>
+                            <p class="show-date">📅 Del 10 al 25 de Noviembre, 2025</p>
+                            <p class="show-time">🕐 19:30 hs</p>
+                            <p class="show-sala">📍 Sala Experimental</p>
+                            <div class="show-price">$1,500 - $2,800</div>
+                            <a href="compra.html?show=inspector" class="btn-secondary">Comprar Entradas</a>
+                        </div>
+                    </div>
+
+                    <div class="show-card" data-category="infantil">
+                        <div class="show-image">
+                            <img src="https://www.nacion.com/resizer/v2/C2UFTAGJDNDL7OLRV6GBTDEZYA.jpg?smart=true&auth=b0f0b9ed4f60703bd543efd0104d0f1feeb041ea2031e2e249db3f6e93421bc7&width=1440&height=961" alt="Pinocho">
+                        </div>
+                        <div class="show-info">
+                            <h3>Pinocho</h3>
+                            <p class="show-theme">Musical infantil basado en el cuento clásico</p>
+                            <p class="show-cast"><strong>Elenco:</strong> Niños del Taller de Teatro</p>
+                            <p class="show-date">📅 Sábados y Domingos, 2025</p>
+                            <p class="show-time">🕐 16:00 hs</p>
+                            <p class="show-sala">📍 Sala Infantil</p>
+                            <div class="show-price">$800 - $1,200</div>
+                            <a href="compra.html?show=pinocho" class="btn-secondary">Comprar Entradas</a>
+                        </div>
+                    </div>
+
+                    <div class="show-card" data-category="drama">
+                        <div class="show-image">
+                            <img src="https://i.ytimg.com/vi/6SdlEKl7HgE/maxresdefault.jpg" alt="Esperando a Godot">
+                        </div>
+                        <div class="show-info">
+                            <h3>Esperando a Godot</h3>
+                            <p class="show-theme">Drama existencial de Samuel Beckett</p>
+                            <p class="show-cast"><strong>Elenco:</strong> Luis Fernández, José María Ramos</p>
+                            <p class="show-date">📅 Del 5 al 20 de Diciembre, 2025</p>
+                            <p class="show-time">🕐 20:00 hs</p>
+                            <p class="show-sala">📍 Sala Íntima</p>
+                            <div class="show-price">$2,000 - $3,500</div>
+                            <a href="compra.html?show=godot" class="btn-secondary">Comprar Entradas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información adicional -->
+        <section class="theater-info">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🎫 Descuentos</h3>
+                        <p>Estudiantes y jubilados: 20% de descuento</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📱 Reservas</h3>
+                        <p>Reserva online o llama al (011) 4567-8900</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🚗 Estacionamiento</h3>
+                        <p>Estacionamiento gratuito para espectadores</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🎭 Teatro del Sol</h3>
+                    <p>El mejor teatro de Buenos Aires desde 1950. Descubre la magia del teatro en cada función.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="cartelera.html">Cartelera</a></li>
+                        <li><a href="salas.html">Salas</a></li>
+                        <li><a href="registro.html">Registro</a></li>
+                        <li><a href="login.html">Iniciar Sesión</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📍 Av. Corrientes 1234, Buenos Aires</p>
+                    <p>📞 (011) 4567-8900</p>
+                    <p>✉️ info@teatrodelsol.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horarios</h4>
+                    <p>Lunes a Domingo: 20:00 hs</p>
+                    <p>Boletería: 14:00 - 22:00 hs</p>
+                    <p>Matinés: Sábados y Domingos 16:00 hs</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Teatro del Sol. Todos los derechos reservados.</p>
+                <p>Desarrollado con ❤️ para la mejor experiencia teatral</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

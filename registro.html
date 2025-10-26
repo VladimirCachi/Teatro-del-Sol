@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Teatro del Sol</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎭</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G1GQ924XFX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G1GQ924XFX');
+</script>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>🎭 Teatro del Sol</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cartelera.html" class="nav-link">Cartelera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="salas.html" class="nav-link">Salas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="registro.html" class="nav-link active">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">Iniciar Sesión</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Registro de Usuario</h1>
+                <p>Únete a nuestra comunidad teatral y accede a beneficios exclusivos</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="container">
+                <div class="form-container">
+                    <form id="registroForm" class="registration-form">
+                        <h2>Crear Cuenta</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="apellido">Apellido *</label>
+                                <input type="text" id="apellido" name="apellido" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                            <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Contraseña *</label>
+                            <input type="password" id="password" name="password" required minlength="6">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirmar Contraseña *</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferencias">Preferencias Teatrales</label>
+                            <select id="preferencias" name="preferencias">
+                                <option value="">Selecciona una opción</option>
+                                <option value="drama">Drama</option>
+                                <option value="comedia">Comedia</option>
+                                <option value="musical">Musical</option>
+                                <option value="experimental">Teatro Experimental</option>
+                                <option value="infantil">Teatro Infantil</option>
+                                <option value="todas">Todas las categorías</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notificaciones">
+                                <input type="checkbox" id="notificaciones" name="notificaciones">
+                                Deseo recibir notificaciones sobre nuevas obras y promociones
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="terminos">
+                                <input type="checkbox" id="terminos" name="terminos" required>
+                                Acepto los <a href="#" class="link">términos y condiciones</a> *
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Registrarse</button>
+                    </form>
+
+                    <div class="benefits-section">
+                        <h3>Beneficios de Registrarse</h3>
+                        <ul class="benefits-list">
+                            <li>🎫 Descuentos exclusivos en entradas</li>
+                            <li>📧 Notificaciones anticipadas de nuevas obras</li>
+                            <li>🎁 Acceso a promociones especiales</li>
+                            <li>📱 Reserva online rápida y segura</li>
+                            <li>👥 Invitaciones a eventos exclusivos</li>
+                            <li>💳 Pago con tarjeta de descuento</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🎭 Teatro del Sol</h3>
+                    <p>El mejor teatro de Buenos Aires desde 1950. Descubre la magia del teatro en cada función.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="cartelera.html">Cartelera</a></li>
+                        <li><a href="salas.html">Salas</a></li>
+                        <li><a href="registro.html">Registro</a></li>
+                        <li><a href="login.html">Iniciar Sesión</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📍 Av. Corrientes 1234, Buenos Aires</p>
+                    <p>📞 (011) 4567-8900</p>
+                    <p>✉️ info@teatrodelsol.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horarios</h4>
+                    <p>Lunes a Domingo: 20:00 hs</p>
+                    <p>Boletería: 14:00 - 22:00 hs</p>
+                    <p>Matinés: Sábados y Domingos 16:00 hs</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Teatro del Sol. Todos los derechos reservados.</p>
+                <p>Desarrollado con ❤️ para la mejor experiencia teatral</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
